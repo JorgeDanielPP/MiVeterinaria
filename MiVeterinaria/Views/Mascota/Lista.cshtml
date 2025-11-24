@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<MiVeterinaria.Models.Mascota>;
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <h2> lista mascotas</h2>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Raza</th>
+                    <th>Edad</th>
+                    <th>Sexo</th>
+                    <th>NombreMascota</th>
+                    <th>NombrePropietario</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
+                    <th>FechaRegisto</th>
+                    <th>Activo</th>
+                    <th></th>
+                 </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.IdMascota</td>
+                        <td>@item.Raza</td>
+                        <td>@item.Edad</td>
+                        <td>@item.Sexo</td>
+                        <td>@item.NombreMascota</td>
+                        <td>@item.NombrePropietario</td>
+                        <td>@item.Correo</td>
+                        <td>@item.Telefono</td>
+                        <td>@item.FechaRegisto.ToString("dd/MM/yyyy")</td>
+                        <td>(@item.Activo ? "Si": "No")</td>
+                        <td></td>
+                      </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
