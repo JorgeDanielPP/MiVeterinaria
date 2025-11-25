@@ -18,5 +18,19 @@ namespace MiVeterinaria.Controllers
             List<Mascota> lista = await _appDBContext.Mascotas.ToListAsync();
             return View(lista);
         }
+
+        [HttpGet]
+        public IActionResult Nuevo()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Nuevo(Mascota mascota)
+        {
+            await _appDBContext.Mascotas.AddAsync(mascota);
+            await _appDBContext.SaveChangesAsync();
+            return RedirectToAction(nameof (Lista));
+        }
     }
 }
