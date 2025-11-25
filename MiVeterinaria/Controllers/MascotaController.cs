@@ -32,5 +32,21 @@ namespace MiVeterinaria.Controllers
             await _appDBContext.SaveChangesAsync();
             return RedirectToAction(nameof (Lista));
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Editar(int id)
+        {
+            Mascota mascota = await _appDBContext.Mascotas.FirstAsync(e => e.IdMascota == id);
+            return View(mascota);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Editar(Mascota mascota)
+        {
+             _appDBContext.Mascotas.Update(mascota);
+            await _appDBContext.SaveChangesAsync();
+            return RedirectToAction(nameof(Lista));
+        }
     }
 }
