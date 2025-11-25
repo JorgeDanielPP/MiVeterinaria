@@ -45,11 +45,17 @@
                                 asp-action="Editar" 
                                 asp-route-id="@item.IdMascota"
                                 class="btn btn-primary">
-                                Editar</a>
+                                Editar
+                            </a>
+
+                            <a asp-controller="Mascota"
+                               asp-action="Eliminar"
+                               asp-route-id="@item.IdMascota" 
+                               onclick="return confirmar()"
+                               class="btn btn-danger">
+                               Eliminar
+                            </a>
                           
-
-
-
                         </td>
                       </tr>
                 }
@@ -58,5 +64,13 @@
     </div>
 
 </div>
+@section Scripts{
+<script>
+    function confirmar(){
+        return confirm("Está seguro de eliminar la mascota ?")
+    }
+</script>
+
+}
 
 
