@@ -39,7 +39,18 @@
                         <td>@item.Telefono</td>
                         <td>@item.FechaRegisto.ToString("dd/MM/yyyy")</td>
                         <td>(@item.Activo ? "Si": "No")</td>
-                        <td></td>
+                        <td>
+                            <a 
+                                asp-controller="Mascota" 
+                                asp-action="Editar" 
+                                asp-route-id="@item.IdMascota"
+                                class="btn btn-primary">
+                                Editar</a>
+                          
+
+
+
+                        </td>
                       </tr>
                 }
             </tbody>
