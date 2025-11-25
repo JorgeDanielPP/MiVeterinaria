@@ -142,3 +142,4 @@ C:\Users\MY PC\Desktop\MiVeterinaria\MiVeterinaria\obj\Debug\net8.0\refint\MiVet
 C:\Users\MY PC\Desktop\MiVeterinaria\MiVeterinaria\obj\Debug\net8.0\MiVeterinaria.pdb
 C:\Users\MY PC\Desktop\MiVeterinaria\MiVeterinaria\obj\Debug\net8.0\MiVeterinaria.genruntimeconfig.cache
 C:\Users\MY PC\Desktop\MiVeterinaria\MiVeterinaria\obj\Debug\net8.0\ref\MiVeterinaria.dll
+C:\Users\MY PC\Desktop\MiVeterinaria\MiVeterinaria\obj\Debug\net8.0\MiVeterinaria.sourcelink.json
