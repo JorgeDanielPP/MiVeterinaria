@@ -40,7 +40,6 @@ namespace MiVeterinaria.Controllers
             return View(mascota);
         }
 
-
         [HttpPost]
         public async Task<IActionResult> Editar(Mascota mascota)
         {
@@ -48,5 +47,15 @@ namespace MiVeterinaria.Controllers
             await _appDBContext.SaveChangesAsync();
             return RedirectToAction(nameof(Lista));
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Eliminar(int id)
+        {
+            Mascota mascota = await _appDBContext.Mascotas.FirstAsync(e => e.IdMascota == id);
+            _appDBContext.Mascotas.Remove(mascota);
+            await _appDBContext.SaveChangesAsync();
+            return RedirectToAction(nameof(Lista));
+         }
+
     }
 }
